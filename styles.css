@@ -1,0 +1,223 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 15px;
+}
+
+nav {
+    background-color: #242424;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    color: white;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+main {
+    flex: 2;
+}
+
+article {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: 1px solid rgb(145, 145, 145);
+    margin-right: 10px;
+}
+article h2 {
+    font-size: 45px;
+    text-align: justify;
+}
+article h3 {
+    font-size: 40px;
+    text-align: justify;
+}
+
+article p, ol, ul {
+    font-size: 30px;
+    text-align: justify;
+}
+
+aside {
+    flex: 1;
+    background-color: #c9c9c9;
+    padding: 10px;
+    max-height: 100vh; /* Ensures the sidebar doesn’t overflow */
+    overflow-y: auto; /* Allows scrolling if there are many posts */
+    position: sticky; /* Keeps the sidebar fixed */
+    top: 10px; /* Adjust the top spacing as needed */
+}
+
+/* Desktop view (default) */
+.recent-post {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px; /* Increased padding for better spacing */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+.recent-post img {
+    width: 150px; /* Larger image for desktop */
+    height: 150px; /* Keeps images square */
+    margin-right: 20px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.recent-post-info a {
+    font-size: 22px; /* Larger text for titles */
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+.recent-post-info p {
+    font-size: 18px; /* Larger description text */
+    color: #555;
+    margin: 10px 0 0;
+}
+
+footer {
+    background-color: #242424;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        max-width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: center; /* Center content */
+        align-items: center; /* Align items to the center */
+        text-align: center; /* Ensure text aligns center */
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .recent-post {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 500px;
+        margin-bottom: 20px;
+        text-align: center;
+        box-sizing: border-box;
+        overflow: hidden; /* Ensures nothing spills outside */
+    }
+    
+    .recent-post img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+
+    aside {
+        position: static;
+        max-width: 100%;
+        padding: 20px;
+        overflow-y: visible;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Ensure the sidebar is also centered */
+    }
+
+    footer {
+        position: relative;
+    }
+
+    /* Font size adjustments for mobile view */
+    article h2 {
+        font-size: 30px; 
+        text-align: left;
+    }
+
+    article h3 {
+        font-size: 25px; 
+        text-align: left;
+    }
+
+    article p, ol, ul {
+        font-size: 17px; 
+        text-align: left;
+    }
+
+    .recent-post-info a {
+        font-size: 15px; 
+        text-align: center;
+    }
+
+    .recent-post-info p {
+        font-size: 12px; 
+        text-align: center;
+    }
+}
+
+
